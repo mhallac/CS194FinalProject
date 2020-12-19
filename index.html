@@ -133,20 +133,25 @@
         <h2 id="styletransfer">
             Image Quilting
         </h2>
+        <p>
+            In this project, taking a sample image of a texture, we extend out that texture to cover a larger area, and can transfer the texture to an image.
+        </p>
         <h4>Texture sample image</h4>
         <div class="gallery">
             <figure>
                 <img src="inputs/bricks_small.jpg"> 
                 <figcaption>
-                    Randomly sampled texture
+                    Texture sample image
                 </figcaption>
             </figure>
         </div>
 
-
         <h4>
             Randomly Sampled Texture
         </h4>
+        <p>
+            First, we can geneate the texture by taking random patches from the sample image and mosaicing them onto a canvas.
+        </p>
         <div class="gallery">
             <figure>
                 <img src="outputs/random_texture.png"> 
@@ -155,10 +160,16 @@
                 </figcaption>
             </figure>
         </div>
+        <p>
+            This produces results with seems, and can be improved by overlapping the patches and matching them with some metric.
+        </p>
 
         <h4>
             Overlapping Patches
         </h4>
+        <p>
+            By when appending a new patch, we can make it more seamless by finding another patch that closely matches the first patch in the overlapping region, and by overlapping the patches by 50%. To pick out the next patch, find the one with the lowest sum of squared differences between itself and first patch.
+        </p>
         <div class="gallery">
             <figure>
                 <img src="outputs/overlapping_patches.png"> 
@@ -171,32 +182,34 @@
         <h4>
             Texture Transfer
         </h4>
-    
+        <p>
+            First we lay down one (random) tile in the top left of the image, then for each subsequent tile placement, we score all possible tiles as the sum of the SSD between the possible tile and the existing output image (masked so that it only evaluates a score on the overlap) and between the possible tile and the target image. We then sort all possible tiles by score, and randomly choose among the best 100. 
+        </p>
         <div class="gallery">
             <figure>
-                <img src="inputs/taj_bw.jpg"> 
+                <img src="inputs/matt.jpg"> 
                 <figcaption>
-                    Taj Mahal before
+                    Matt
                 </figcaption>
             </figure>
             <figure>
-                <img src="outputs/taj_out.jpg"> 
+                <img src="outputs/matt_bricks.png"> 
                 <figcaption>
-                    Taj Mahal after
+                    Brick Matt
                 </figcaption>
             </figure>
         </div>
         <div class="gallery">
             <figure>
-                <img src="inputs/pineapple_bw.jpg"> 
+                <img src="inputs/saurav.jpg"> 
                 <figcaption>
-                    Pineapple Before
+                    Saurav
                 </figcaption>
             </figure>
             <figure>
-                <img src="outputs/pineapple_out.jpg"> 
+                <img src="outputs/saurav_bricks.png"> 
                 <figcaption>
-                    Pineapple after
+                    Brick Saurav
                 </figcaption>
             </figure>
         </div>
