@@ -8,7 +8,7 @@
     <div class="wrapper">
         <div class="navbar">
             <ul>
-                <li><a href="#styletransfer">Style Transfer</a></li>
+                <li><a href="#styletransfer">Image Quilting</a></li>
                 <li><a href="#lightfield">Lightfield Camera</a></li>
                 <li><a href="#ar">Augmented Reality</a></li>
                 
@@ -24,33 +24,33 @@
             Overview
         </h3>
         <p>
-            For the CS 194-26 final project, we choose to do three projects - Augmented Reality, Light Field Camera, and Style Transfer
+            For the CS 194-26 final project, we choose to do three projects - Augmented Reality, Light Field Camera, and Image Quilting.
         </p>
         <hr>
         <h2 id="ar">
             Augmented Reality
         </h3>
         <h4>
-            Insert input and output videos here, along with some text
+            Hover over gifs to make bigger
         </h4>
         
         <div class="gallery">
             <figure>
-                <img src="inputs/cameraman.png"> 
+                <img src="outputs/ar1.gif"> 
                 <figcaption>
-                    Original cameraman image
+                    Video of Box
                 </figcaption>
             </figure>
             <figure>
-                <img src="outputs/dx_cm.png"> 
+                <img src="outputs/ar2.gif"> 
                 <figcaption>
-                    Cameraman x derivative
+                    Tracked Control Points
                 </figcaption>
             </figure>
             <figure>
-                <img src="outputs/dy_cm.png"> 
+                <img src="outputs/ar3.gif"> 
                 <figcaption>
-                    Cameraman y derivative
+                    Simulated Box in AR
                 </figcaption>
             </figure>
         </div>
@@ -59,44 +59,66 @@
         <h2 id="lightfield">
             Light Field Camera
         </h2>
+        <h4>Overview</h4>
+        <p>
+            WRITE OVERVIEW HERE
+        </p>
         <h4>
-            add stuff here
+            Depth Refocusing
         </h4>
+        <p>
+            To refocus the depth, we have to shift each image so that each of them are centered around the same point, and then take the average of the shifted images.
+        </p>
     
-        <div class="gallery">
+        <div class="gallery" style="width:500px">
             <figure>
-                <img src="inputs/taj_bw.jpg"> 
-                <figcaption>
-                    Taj Mahal before
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="outputs/taj_out.jpg"> 
-                <figcaption>
-                    Taj Mahal after
+                <img src="outputs/vary_focus.gif" style="width:500px"> 
+                <figcaption style="width:500px">
+                    Varying the focus on a chessboard
                 </figcaption>
             </figure>
         </div>
-        <div class="gallery">
+
+        <h4>
+            Aperture Adjustment
+        </h4>
+        <p>
+            WRITE OVERVIEW HERE
+        </p>
+        <div class="gallery" style="width:500px">
             <figure>
-                <img src="inputs/pineapple_bw.jpg"> 
-                <figcaption>
-                    Pineapple Before
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="outputs/pineapple_out.jpg"> 
-                <figcaption>
-                    Pineapple after
+                <img src="outputs/aperture_adjust.gif" style="width:500px"> 
+                <figcaption style="width:500px">
+                    Varying the aperture on a chessboard
                 </figcaption>
             </figure>
         </div>
+
+        <h4>
+            Summary
+        </h4>
+        <p>
+            WRITE SUMMARY HERE
+        </p>
+        
         <hr>
         <h2 id="styletransfer">
-            Style Transfer
+            Image Quilting
         </h2>
         <h4>
-            add stuff here
+            Randomly Sampled Texture
+        </h4>
+
+        <h4>
+            Overlapping Patches
+        </h4>
+
+        <h4>
+            Seam Finding
+        </h4>
+
+        <h4>
+            Texture Transfer
         </h4>
     
         <div class="gallery">
