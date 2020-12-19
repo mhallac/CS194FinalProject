@@ -61,7 +61,7 @@
         </h2>
         <h4>Overview</h4>
         <p>
-            WRITE OVERVIEW HERE
+            In this project we explore the idea of using many cameras to simulate different properties like focal length/distance and aperture width. We further try to apply this technique to our own dataset (an array of images of a dining table) to see how robust our simulation mechanisms are (more on that below).
         </p>
         <h4>
             Depth Refocusing
@@ -98,7 +98,35 @@
             Summary
         </h4>
         <p>
-            We learned a lot about light fields from this project. The most interesting thing that we learned was while looking at different data sets provided. In one data set of jelly-beans we noticed that the x and y axis corresponded to lateral and vertical rotations of the camera
+            We learned a lot about light fields from this project. The most interesting thing that we learned was while looking at different data sets provided. In one data set of jelly-beans we noticed that the x and y axis corresponded to lateral and vertical rotations of the camera. In this case, the effects of our refocusing were actually reversed (a mean of all images focused on the close-by object, and shifting the images before averaging moved the focus backwards). This was an interesting observation that deepend our understanding of light fields.
+        </p>
+
+        <h4>Bells &amp; Whistles - Using custom data</h4>
+        <p>
+            Here we collected a custom dataset by taking photos of a scene from different spots to make up a light field.
+        </p>
+        <div class="gallery">
+            <figure>
+                <img src="outputs/custom_data.png"> 
+                <figcaption>
+                    Sample dataset image
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="outputs/focus_attempt.png"> 
+                <figcaption>
+                    Attempted focus shift
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="outputs/aperture_attempt.png"> 
+                <figcaption>
+                    Attempted aperture adjust
+                </figcaption>
+            </figure>
+        </div>
+        <p>
+            Neither focusing nor aperture adjustment worked well with our custom dataset. This is because no matter how hard I try, its almost impossible to keep my phone pointing straight for every single image. The rotation introduced so much noise that objects in the distance did not move all that much less than objects nearby from frame to frame.
         </p>
         
         <hr>
